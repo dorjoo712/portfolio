@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ThemeToggle } from '@/components/theme-toggle';
-import { Mail, GraduationCap, Github, Linkedin, FileDown } from "lucide-react";
+import { Mail, Github, Linkedin, FileDown } from "lucide-react";
 
 export default function Home() {
   const experiences = [
@@ -78,7 +78,7 @@ export default function Home() {
       <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
           <div className="relative">
-            <div className="pb-8">
+            <div className="pb-8 md:pb-20">
               <div className="flex items-center gap-4">
                 <Image src="/profile.jpg" alt="Nyamdorj Gombodorj" width={200} height={200} className="h-16 w-16 md:h-18 md:w-18 lg:h-20 lg:w-20 rounded-full" />
                 <div>
@@ -93,6 +93,12 @@ export default function Home() {
                 <p>{"Hello, I'm Nyamdorj (Dorj) Gombodorj, a frontend developer with over 9 years of experience in the tech industry."}</p>
                 <p className="mt-3">I specialize in building scalable web applications with modern JavaScript frameworks, creating robust design systems, and elevating user experiences.</p>
                 <p className="mt-3">Driven by a passion for crafting high-performance, user-focused interfaces, I strive to deliver beautiful and functional digital experiences that make a global impact.</p>
+                <div className="mt-5">
+                  <a href="/dorj_gombo_resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Resume (opens in a new tab)" className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-4 text-slate-800 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 transition-transform hover:translate-y-1 focus-visible:translate-y-1 motion-reduce:transition-none translate-y-px">
+                    <FileDown className="h-5 w-5 mr-2" />
+                    Download Resume
+                  </a>
+                </div>
               </div>
             </div>
             <div className="flex flex-row gap-8">
@@ -108,17 +114,13 @@ export default function Home() {
                 <Mail className="h-6 w-6" />
               </a>
               <ThemeToggle />
-              <a href="/dorj_gombo_resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Resume (opens in a new tab)" className="text-sm flex items-center gap-2 text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50 group/link">
-                <FileDown className="h-6 w-6 transition-transform group-hover/link:translate-y-1 group-focus-visible/link:translate-y-1 motion-reduce:transition-none translate-y-px" />
-                <span>Download Resume</span>
-              </a>
             </div>
           </div>
         </header>
         <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
           <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <h2 className="text-3xl font-bold mb-8">Experience</h2>
-            <div className="space-y-6">
+            <div className="space-y-8 md:space-y-4">
               {experiences.map((exp) => (
                 <Card key={exp.company} className="group">
                   <CardHeader>
@@ -183,11 +185,10 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8">Education</h2>
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <GraduationCap className="h-5 w-5" />
-                  BS in Computer Science
+                <CardTitle>
+                  Bachelor of Science in Computer Science
                 </CardTitle>
-                <p className="text-slate-700 dark:text-slate-300 text-sm leading-normal">Graduated June 2014 at Mongolian University of Science and Technology</p>
+                <p className="text-slate-700 dark:text-slate-300 text-sm leading-normal">Graduated in June 2014 from the Mongolian University of Science and Technology</p>
               </CardHeader>
             </Card>
           </section>
