@@ -152,7 +152,7 @@ export default function Home() {
           </section>
           <section id="project" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
-            <div>
+            <div className="space-y-8 md:space-y-4">
               {projects.map((project) => (
                 <Card key={project.company} className="group">
                   <CardHeader>
