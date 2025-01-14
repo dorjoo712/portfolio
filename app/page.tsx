@@ -94,7 +94,7 @@ export default function Home() {
                 <p className="mt-3">I specialize in building scalable web applications with modern JavaScript frameworks, creating robust design systems, and elevating user experiences.</p>
                 <p className="mt-3">Driven by a passion for crafting high-performance, user-focused interfaces, I strive to deliver beautiful and functional digital experiences that make a global impact.</p>
                 <div className="mt-5">
-                  <a href="/dorj_gombo_resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Resume (opens in a new tab)" className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-4 text-slate-800 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 transition-transform hover:translate-y-1 focus-visible:translate-y-1 motion-reduce:transition-none translate-y-px">
+                  <a href="/dorj_gombo_resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Resume (opens in a new tab)" className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-4 text-slate-800 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 dark:text-slate-300 dark:ring-slate-300/10 dark:hover:bg-white/15 dark:hover:ring-slate-300/15 transition-transform hover:translate-y-1 focus-visible:translate-y-1 motion-reduce:transition-none translate-y-px">
                     <FileDown className="h-5 w-5 mr-2" />
                     Download Resume
                   </a>
