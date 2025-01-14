@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ThemeToggle } from '@/components/theme-toggle';
-import { Mail, GraduationCap, Github, Linkedin } from "lucide-react";
+import { Mail, GraduationCap, Github, Linkedin, FileDown } from "lucide-react";
 
 export default function Home() {
   const experiences = [
@@ -89,7 +89,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="mt-6 max-w-sm text-sm leading-normal text-slate-600 dark:text-slate-400">
+              <div className="mt-6 max-w-sm text-sm leading-normal text-slate-700 dark:text-slate-400">
                 <p>{"Hello, I'm Nyamdorj (Dorj) Gombodorj, a frontend developer with over 9 years of experience in the tech industry."}</p>
                 <p className="mt-3">I specialize in building scalable web applications with modern JavaScript frameworks, creating robust design systems, and elevating user experiences.</p>
                 <p className="mt-3">Driven by a passion for crafting high-performance, user-focused interfaces, I strive to deliver beautiful and functional digital experiences that make a global impact.</p>
@@ -108,6 +108,10 @@ export default function Home() {
                 <Mail className="h-6 w-6" />
               </a>
               <ThemeToggle />
+              <a href="/dorj_gombo_resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Resume (opens in a new tab)" className="text-sm flex items-center gap-2 text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50 group/link">
+                <FileDown className="h-6 w-6 transition-transform group-hover/link:translate-y-1 group-focus-visible/link:translate-y-1 motion-reduce:transition-none translate-y-px" />
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
         </header>
@@ -116,16 +120,16 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8">Experience</h2>
             <div className="space-y-6">
               {experiences.map((exp) => (
-                <Card key={exp.company}>
+                <Card key={exp.company} className="group">
                   <CardHeader>
                     <div className="space-y-1">
-                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-400">
                         {exp.period}
                       </p>
                       <CardTitle className="flex items-center gap-2 text-slate-700 dark:text-white">
                         {exp.position} - 
                         {exp.link ? (
-                          <a href={exp.link} target='_blank' rel="noreferrer noopener" aria-label={exp.company + ' (opens in a new tab)'} className="transition-colors hover:text-slate-900 dark:hover:text-slate-300">{exp.company}</a>
+                          <a href={exp.link} target='_blank' rel="noreferrer noopener" aria-label={exp.company + ' (opens in a new tab)'} className="transition-colors hover:text-slate-900 dark:hover:text-slate-300 group-hover:underline">{exp.company}</a>
                         ) : (
                           <span>{exp.company}</span>
                         )}
@@ -133,7 +137,7 @@ export default function Home() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm leading-normal text-slate-600 dark:text-slate-400">{exp.info}</p>
+                    <p className="text-sm leading-normal text-slate-700 dark:text-slate-400">{exp.info}</p>
                     <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                       {exp.technologies.map((tech) => (
                         <li key={tech} className="mr-1.5 mt-2">
@@ -148,18 +152,18 @@ export default function Home() {
           </section>
           <section id="project" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
-            <div className="space-y-6">
+            <div>
               {projects.map((project) => (
-                <Card key={project.company}>
+                <Card key={project.company} className="group">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <a href={project.link} target='_blank' rel="noreferrer noopener" aria-label={project.company + ' (opens in a new tab)'} className="text-slate-700 transition-colors hover:text-slate-900 dark:text-white dark:hover:text-slate-200">{project.company}</a>
+                      <a href={project.link} target='_blank' rel="noreferrer noopener" aria-label={project.company + ' (opens in a new tab)'} className="text-slate-700 transition-colors hover:text-slate-900 dark:text-white dark:hover:text-slate-200 group-hover:underline">{project.company}</a>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="relative grid sm:grid-cols-8">
-                      <div className="order-1 sm:col-span-6">
-                        <p className="text-sm leading-normal text-slate-600 dark:text-slate-400">{project.info}</p>
+                      <div className="order-1 sm:col-span-6 mr-3">
+                        <p className="text-sm leading-normal text-slate-700 dark:text-slate-400">{project.info}</p>
                         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                           {project.technologies.map((tech) => (
                             <li key={tech} className="mr-1.5 mt-2">
@@ -183,11 +187,11 @@ export default function Home() {
                   <GraduationCap className="h-5 w-5" />
                   BS in Computer Science
                 </CardTitle>
-                <p className="text-slate-600 dark:text-slate-300 text-sm leading-normal">Graduated June 2014 at Mongolian University of Science and Technology</p>
+                <p className="text-slate-700 dark:text-slate-300 text-sm leading-normal">Graduated June 2014 at Mongolian University of Science and Technology</p>
               </CardHeader>
             </Card>
           </section>
-          <footer className="max-w-md pb-16 text-sm text-slate-600 dark:text-slate-300 sm:pb-0">
+          <footer className="max-w-md pb-16 text-sm text-slate-700 dark:text-slate-300 sm:pb-0">
             <div className="flex content-center">
               <p>Built with <a href="https://nextjs.org/" className="font-medium" target="_blank" rel="noreferrer noopener" aria-label="Next.js (opens in a new tab)">Next.js</a> and <a href="https://tailwindcss.com/" className="font-medium" target="_blank" rel="noreferrer noopener" aria-label="Tailwind CSS (opens in a new tab)">Tailwind CSS</a>.</p>
             </div>
