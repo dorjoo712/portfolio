@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, GraduationCap, Github, Linkedin } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ThemeToggle } from '@/components/theme-toggle';
+import { Mail, GraduationCap, Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   const experiences = [
@@ -76,7 +77,7 @@ export default function Home() {
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
       <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
-          <div>
+          <div className="relative">
             <div className="pb-8">
               <div className="flex items-center gap-4">
                 <Image src="/profile.jpg" alt="Nyamdorj Gombodorj" width={200} height={200} className="h-16 w-16 md:h-18 md:w-18 lg:h-20 lg:w-20 rounded-full" />
@@ -106,6 +107,7 @@ export default function Home() {
               <a href="mailto:dorjo.gd@gmail.com" className="text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50">
                 <Mail className="h-6 w-6" />
               </a>
+              <ThemeToggle />
             </div>
           </div>
         </header>
