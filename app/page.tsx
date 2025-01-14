@@ -60,13 +60,15 @@ export default function Home() {
       company: 'Athlete Era Connect',
       info: 'Developed, maintained, and shipped production code for a coaching management tool to help coaches plan efficiently, stay organized, and run effective practices.',
       link: 'https://portal.athlete-era.com',
-      technologies: ['Javscript', 'Vue.js', 'Vuetify', 'Firebase']
+      technologies: ['Javscript', 'Vue.js', 'Vuetify', 'Firebase'],
+      picture: '/athlete-era-connect.png'
     },
     {
       company: 'SKSIS Mapper',
       info: 'Build and styled interactive web application for Predictive soil mapping service',
       link: 'https://mapper.sksis.ca',
-      technologies: ['Javscript', 'Vue.js', 'TailwindCSS', 'Pinia', 'Vite']
+      technologies: ['Javscript', 'Vue.js', 'TailwindCSS', 'Pinia', 'Vite'],
+      picture: '/sksis-mapper.png'
     }
   ]
 
@@ -86,21 +88,22 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="mt-6 max-w-sm text-sm leading-normal">
-                <p>My name is Nyamdorj (Dorj) Gombodorj and I am a frontend developer with over 9 years of experience working in the tech industry. I currently reside in Saskatoon, Canada.</p>
-                <p className="mt-3">I am passionate about building beautiful and functional user interfaces.</p>
+              <div className="mt-6 max-w-sm text-sm leading-normal text-slate-600 dark:text-slate-400">
+                <p>{"Hello, I'm Nyamdorj (Dorj) Gombodorj, a frontend developer with over 9 years of experience in the tech industry."}</p>
+                <p className="mt-3">I specialize in building scalable web applications with modern JavaScript frameworks, creating robust design systems, and elevating user experiences.</p>
+                <p className="mt-3">Driven by a passion for crafting high-performance, user-focused interfaces, I strive to deliver beautiful and functional digital experiences that make a global impact.</p>
               </div>
             </div>
             <div className="flex flex-row gap-8">
-              <a href="https://github.com/dorjoo712" target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub">
+              <a href="https://github.com/dorjoo712" target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub" className="text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50">
                 <span className="sr-only">GitHub</span>
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/in/nyamdorj-gombodorj" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/dorj-gombo" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn" className="text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="mailto:dorjo.gd@gmail.com">
+              <a href="mailto:dorjo.gd@gmail.com" className="text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
@@ -114,16 +117,21 @@ export default function Home() {
                 <Card key={exp.company}>
                   <CardHeader>
                     <div className="space-y-1">
-                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-700">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">
                         {exp.period}
                       </p>
-                      <CardTitle className="flex items-center gap-2">
-                        {exp.position}, {exp.company}
+                      <CardTitle className="flex items-center gap-2 text-slate-700 dark:text-white">
+                        {exp.position} - 
+                        {exp.link ? (
+                          <a href={exp.link} target='_blank' rel="noreferrer noopener" aria-label={exp.company + ' (opens in a new tab)'} className="transition-colors hover:text-slate-900 dark:hover:text-slate-300">{exp.company}</a>
+                        ) : (
+                          <span>{exp.company}</span>
+                        )}
                       </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm leading-normal">{exp.info}</p>
+                    <p className="text-sm leading-normal text-slate-600 dark:text-slate-400">{exp.info}</p>
                     <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                       {exp.technologies.map((tech) => (
                         <li key={tech} className="mr-1.5 mt-2">
@@ -143,18 +151,23 @@ export default function Home() {
                 <Card key={project.company}>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      {project.company}
+                      <a href={project.link} target='_blank' rel="noreferrer noopener" aria-label={project.company + ' (opens in a new tab)'} className="text-slate-700 transition-colors hover:text-slate-900 dark:text-white dark:hover:text-slate-200">{project.company}</a>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm leading-normal">{project.info}</p>
-                    <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-                      {project.technologies.map((tech) => (
-                        <li key={tech} className="mr-1.5 mt-2">
-                          <div className="inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-zinc-600/10 text-zinc-700 group-data-[hover]:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-[hover]:bg-white/10">{tech}</div>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="relative grid sm:grid-cols-8">
+                      <div className="order-1 sm:col-span-6">
+                        <p className="text-sm leading-normal text-slate-600 dark:text-slate-400">{project.info}</p>
+                        <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+                          {project.technologies.map((tech) => (
+                            <li key={tech} className="mr-1.5 mt-2">
+                              <div className="inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-zinc-600/10 text-zinc-700 group-data-[hover]:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-[hover]:bg-white/10">{tech}</div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <Image src={project.picture} alt={project.company} width={200} height={70} className="aspect-video object-cover rounded border-2 border-slate-100 transition group-hover:border-slate-200/30 order-2 sm:col-span-2 sm:translate-y-1 mt-4 sm:mt-0" />
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -168,11 +181,11 @@ export default function Home() {
                   <GraduationCap className="h-5 w-5" />
                   BS in Computer Science
                 </CardTitle>
-                <p className="text-slate-600 text-sm leading-normal">Graduated June 2014 at Mongolian University of Science and Technology</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-normal">Graduated June 2014 at Mongolian University of Science and Technology</p>
               </CardHeader>
             </Card>
           </section>
-          <footer className="max-w-md pb-16 text-sm text-slate-600 sm:pb-0">
+          <footer className="max-w-md pb-16 text-sm text-slate-600 dark:text-slate-300 sm:pb-0">
             <div className="flex content-center">
               <p>Built with <a href="https://nextjs.org/" className="font-medium" target="_blank" rel="noreferrer noopener" aria-label="Next.js (opens in a new tab)">Next.js</a> and <a href="https://tailwindcss.com/" className="font-medium" target="_blank" rel="noreferrer noopener" aria-label="Tailwind CSS (opens in a new tab)">Tailwind CSS</a>.</p>
             </div>
