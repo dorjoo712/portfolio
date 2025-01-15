@@ -8,7 +8,7 @@
 ## Running the site locally
 
 ```command
-git@github.com:dorjoo712/portfolio.git
+git clone git@github.com:dorjoo712/portfolio.git
 cd portfolio
 pnpm install
 pnpm dev
