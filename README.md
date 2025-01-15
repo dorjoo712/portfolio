@@ -1,4 +1,3 @@
-
 ## My site built with Next.js, Tailwind, and Vercel
 
 - Framework: [Next.js](https://nextjs.org)

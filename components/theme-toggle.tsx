@@ -1,24 +1,24 @@
-'use client'
+'use client';
 
-import * as React from "react"
-import { Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import * as React from 'react';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
-    <div 
-      className="text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50 hover:cursor-pointer" 
+    <div
+      className="text-slate-700 transition-colors hover:cursor-pointer hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       style={{ colorScheme: theme }}
     >
@@ -29,5 +29,5 @@ export function ThemeToggle() {
       )}
       <span className="sr-only">Toggle theme</span>
     </div>
-  )
+  );
 }
