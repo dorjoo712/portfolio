@@ -97,7 +97,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+    <div className="mx-auto min-h-screen max-w-(--breakpoint-xl) px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
       <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
           <div className="relative">
@@ -225,7 +225,7 @@ export default function Home() {
                     >
                       {exp.technologies.map((tech) => (
                         <li key={tech} className="mr-1.5 mt-2">
-                          <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-xs/5 font-medium text-zinc-700 group-data-[hover]:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-[hover]:bg-white/10 forced-colors:outline">
+                          <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-xs/5 font-medium text-zinc-700 group-data-hover:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10 forced-colors:outline">
                             {tech}
                           </div>
                         </li>
@@ -269,7 +269,7 @@ export default function Home() {
                         >
                           {project.technologies.map((tech) => (
                             <li key={tech} className="mr-1.5 mt-2">
-                              <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-sm/5 font-medium text-zinc-700 group-data-[hover]:bg-zinc-600/20 sm:text-xs/5 dark:bg-white/5 dark:text-zinc-400 dark:group-data-[hover]:bg-white/10 forced-colors:outline">
+                              <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-sm/5 font-medium text-zinc-700 group-data-hover:bg-zinc-600/20 sm:text-xs/5 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10 forced-colors:outline">
                                 {tech}
                               </div>
                             </li>
