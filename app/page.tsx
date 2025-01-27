@@ -108,7 +108,7 @@ export default function Home() {
                   alt="Nyamdorj Gombodorj"
                   width={200}
                   height={200}
-                  className="md:h-18 md:w-18 h-16 w-16 rounded-full lg:h-20 lg:w-20"
+                  className="h-16 w-16 rounded-full md:h-18 md:w-18 lg:h-20 lg:w-20"
                 />
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -120,10 +120,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-6 max-w-sm text-sm leading-normal text-slate-700 dark:text-slate-400">
+              <div className="mt-6 text-sm leading-normal text-slate-700 lg:max-w-md dark:text-slate-400">
                 <p>
                   {
-                    "Hello, I'm Nyamdorj (Dorj) Gombodorj, a frontend developer with over 9 years of experience in the tech industry."
+                    "Hello, I'm Nyamdorj (Dorj) Gombodorj, a frontend developer with over 8 years of experience in the tech industry."
                   }
                 </p>
                 <p className="mt-3">
@@ -194,7 +194,7 @@ export default function Home() {
                 <Card key={exp.company} className="group">
                   <CardHeader>
                     <div className="space-y-1">
-                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-400">
+                      <p className="text-xs font-semibold tracking-wide text-slate-700 uppercase dark:text-slate-400">
                         {exp.period}
                       </p>
                       <CardTitle className="flex items-center gap-2 text-slate-700 dark:text-white">
@@ -205,7 +205,7 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label={exp.company + ' (opens in a new tab)'}
-                            className="transition-colors hover:text-slate-900 group-hover:underline dark:hover:text-slate-300"
+                            className="transition-colors group-hover:underline hover:text-slate-900 dark:hover:text-slate-300"
                           >
                             {exp.company}
                           </a>
@@ -224,7 +224,7 @@ export default function Home() {
                       aria-label="Technologies used"
                     >
                       {exp.technologies.map((tech) => (
-                        <li key={tech} className="mr-1.5 mt-2">
+                        <li key={tech} className="mt-2 mr-1.5">
                           <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-xs/5 font-medium text-zinc-700 group-data-hover:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10 forced-colors:outline">
                             {tech}
                           </div>
@@ -251,7 +251,7 @@ export default function Home() {
                         target="_blank"
                         rel="noreferrer noopener"
                         aria-label={project.company + ' (opens in a new tab)'}
-                        className="text-slate-700 transition-colors hover:text-slate-900 group-hover:underline dark:text-white dark:hover:text-slate-200"
+                        className="text-slate-700 transition-colors group-hover:underline hover:text-slate-900 dark:text-white dark:hover:text-slate-200"
                       >
                         {project.company}
                       </a>
@@ -268,7 +268,7 @@ export default function Home() {
                           aria-label="Technologies used"
                         >
                           {project.technologies.map((tech) => (
-                            <li key={tech} className="mr-1.5 mt-2">
+                            <li key={tech} className="mt-2 mr-1.5">
                               <div className="inline-flex items-center gap-x-1.5 rounded-md bg-zinc-600/10 px-1.5 py-0.5 text-sm/5 font-medium text-zinc-700 group-data-hover:bg-zinc-600/20 sm:text-xs/5 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10 forced-colors:outline">
                                 {tech}
                               </div>
