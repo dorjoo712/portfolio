@@ -9,7 +9,7 @@ export default function Home() {
       company: 'Immigrate Software',
       position: 'Software Developer',
       period: 'Oct 2017 - July 2024',
-      info: 'Build and maintain web applications serving over 100,000 users, spearheading a successful Vue.js to React.js migration that achieved 40% performance improvements. Collaborated with cross-functional teams of developers, designers, and product managers to champion web accessibility best practices.',
+      info: 'Built, maintained, and shipped large web applications from scratch to deployment, used by over 100,000 people. Collaborated with cross-functional teams of developers, designers, and product managers to champion web accessibility best practices.',
       technologies: [
         'Javascript',
         'Typescript',
