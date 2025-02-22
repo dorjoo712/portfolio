@@ -76,7 +76,7 @@ export default function Home() {
       company: 'Shelterbelt DSS',
       info: 'Contributed to the development, maintenance, and deployment of the Shelterbelt Decision Support System. This system supports landowners and decision-makers in planning, managing, and optimizing shelterbelts to enhance environmental and agricultural benefits.',
       link: 'https://shelterbelt-prod.firebaseapp.com/home/index',
-      technologies: ['Javscript', 'Typescript', 'Vue', 'Vuetify', 'Frontend'],
+      technologies: ['Javascript', 'Typescript', 'Vue', 'Vuetify', 'Frontend'],
       picture: '/shelterbelt_dss.png',
     },
     {
@@ -84,7 +84,7 @@ export default function Home() {
       info: 'Build and styled interactive web application for Predictive soil mapping service.',
       link: 'https://mapper.sksis.ca',
       technologies: [
-        'Javscript',
+        'Javascript',
         'Typescript',
         'Vue',
         'TailwindCSS',
